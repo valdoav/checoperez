@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="checo2.png">
-    <title>Checo Pérez</title>
+    <title>Checo Pérez | Cadillac F1</title>
     <style>
         /* --- ESTILOS GENERALES --- */
         body {
@@ -12,48 +12,46 @@
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
-            /* Usamos Flexbox para centrar la tarjeta SOBRE el video */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            overflow: hidden; /* Evita barras de desplazamiento */
+            overflow: hidden;
         }
 
-        /* --- LA MAGIA DEL VIDEO DE FONDO --- */
+        /* --- VIDEO DE FONDO --- */
         .video-container {
-            position: fixed; /* Lo clava en la pantalla */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* ¡IMPORTANTE! Lo manda AL FONDO, detrás de todo */
+            z-index: -1;
             overflow: hidden;
         }
 
         .video-container video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* ¡Aquí está! Adapta el video a la pantalla sin deformarlo */
-            /* A veces, los videos son muy brillantes. Añadimos un filtro oscuro */
-            filter: brightness(0.6); 
+            object-fit: cover;
+            filter: brightness(0.5); /* Un poco más oscuro para que resalte la tabla */
         }
 
-        /* --- LA TARJETA DE PRENSA (Ligeramente retocada para que resalte más) --- */
+        /* --- LA TARJETA --- */
         .card {
-            background: rgba(255, 255, 255, 0.95); /* Fondo blanco con un toque de transparencia */
+            background: rgba(255, 255, 255, 0.95);
             color: #061020;
             padding: 2rem;
             border-radius: 15px;
             border-left: 10px solid #cc0000;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.8); /* Sombra más fuerte */
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
             text-align: center;
             max-width: 400px;
-            position: relative; /* Para asegurarnos de que esté sobre el video container si fuera necesario */
-            z-index: 1; /* Asegura que la tarjeta esté por encima */
+            z-index: 1;
         }
         
-        h1 { margin-bottom: 0.5rem; font-size: 1.8rem; }
+        h1 { margin: 0.5rem 0; font-size: 1.8rem; }
+        
         .numero {
             font-size: 3.5rem;
             font-weight: bold;
@@ -61,15 +59,41 @@
             margin: 0;
             line-height: 1;
         }
+
+        /* --- TABLA DE INFO --- */
+        .info-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .info-table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-table td {
+            padding: 8px 5px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        /* --- ETIQUETA DE EQUIPO --- */
         .tag {
-            background: #ffec00;
+            background: #000; /* Negro para Cadillac */
+            color: #fff;
             padding: 8px 20px;
             border-radius: 20px;
             font-weight: bold;
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 10px;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+            border: 1px solid #333;
         }
     </style>
 </head>
@@ -85,9 +109,35 @@
     <div class="card">
         <p class="numero">11</p>
         <h1>Sergio "Checo" Pérez</h1>
-        <p>Ministro de Defensa de México</p>
-        <div class="tag">Oracle Red Bull Racing</div>
-        <p style="margin-top: 25px; font-size: 0.85rem; color: #555;">Sincronizado vía GitHub 🚀</p>
+        
+        <table class="info-table">
+            <tr>
+                <td class="label">Nombre:</td>
+                <td>Sergio Michel Pérez Mendoza</td>
+            </tr>
+            <tr>
+                <td class="label">Origen:</td>
+                <td>Guadalajara, México 🇲🇽</td>
+            </tr>
+            <tr>
+                <td class="label">Equipo Actual:</td>
+                <td><strong>Cadillac Formula One Team</strong></td>
+            </tr>
+            <tr>
+                <td class="label">Podios:</td>
+                <td>39+</td>
+            </tr>
+            <tr>
+                <td class="label">Apodo:</td>
+                <td>Ministro de Defensa</td>
+            </tr>
+        </table>
+
+        <div class="tag">Cadillac F1 Team</div>
+        
+        <p style="margin-top: 20px; font-size: 0.75rem; color: #888; font-style: italic;">
+            "Never give up" - Sincronizado vía GitHub 🚀
+        </p>
     </div>
 
 </body>
