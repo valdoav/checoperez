@@ -34,7 +34,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(0.5); /* Un poco más oscuro para que resalte la tabla */
+            filter: brightness(0.4); /* Un poco más oscuro para que resalte la tarjeta */
         }
 
         /* --- LA TARJETA --- */
@@ -46,7 +46,7 @@
             border-left: 10px solid #cc0000;
             box-shadow: 0 10px 40px rgba(0,0,0,0.8);
             text-align: center;
-            max-width: 400px;
+            max-width: 450px;
             z-index: 1;
         }
         
@@ -65,7 +65,7 @@
             width: 100%;
             margin: 20px 0;
             border-collapse: collapse;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-align: left;
         }
 
@@ -74,17 +74,19 @@
         }
 
         .info-table td {
-            padding: 8px 5px;
+            padding: 10px 5px;
+            vertical-align: top;
         }
 
         .label {
             font-weight: bold;
             color: #555;
+            width: 30%;
         }
 
         /* --- ETIQUETA DE EQUIPO --- */
         .tag {
-            background: #000; /* Negro para Cadillac */
+            background: #000;
             color: #fff;
             padding: 8px 20px;
             border-radius: 20px;
@@ -94,6 +96,12 @@
             text-transform: uppercase;
             font-size: 0.8rem;
             border: 1px solid #333;
+        }
+
+        .apodos-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
     </style>
 </head>
@@ -121,24 +129,26 @@
             </tr>
             <tr>
                 <td class="label">Equipo Actual:</td>
-                <td><strong>Cadillac Formula One Team, se unió a Cadillac en 2025, anunciandolo el 26 de agosto de 2025</strong></td>
+                <td><strong>Cadillac Formula One Team (Desde 2025)</strong></td>
             </tr>
             <tr>
-                <td class="label">Podios en su carrera:</td>
+                <td class="label">Podios:</td>
                 <td>39+</td>
             </tr>
             <tr>
-                <td class="label">Apodo:</td>
-                <td>Ministro de Defensa</td>
-                <td>El Viejo Sabroso</td>
-                <td>Editado hoy desde VS</td>
-                <td>Chestappen 2021</td>
-                
-            </tr>
+                <td class="label">Apodos:</td>
+                <td>
+                    <ul class="apodos-list">
+                        <li>• Ministro de Defensa</li>
+                        <li>• El Viejo Sabroso</li>
+                        <li>• <strong>Editado hoy desde VS</strong></li>
+                        <li>• Chestappen 2021</li>
+                    </ul>
+                </td>
             </tr>
         </table>
 
-        <div class="tag">Cadillac F1 Team, se integró desde 2025</div>
+        <div class="tag">Cadillac F1 Team</div>
         
         <p style="margin-top: 20px; font-size: 0.75rem; color: #888; font-style: italic;">
             "Never give up", eslogan personal de Checo
